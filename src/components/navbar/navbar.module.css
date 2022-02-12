@@ -1,0 +1,152 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: black;
+    color: white;
+}
+
+.nav_opts {
+    flex-basis: 45%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+
+.nav_opts > li > a{
+    text-decoration: none;
+    padding: 1rem;
+    color: #999;
+    font-size: 1.2rem;
+    transition: 250ms;
+
+}
+
+.nav_opts > li > a:hover{
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 0 2px white;
+}
+
+
+.nav_opts_on {
+    flex-basis: 45%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+
+    /* border: solid 1px red; */
+    
+}
+
+.nav_opts_on > li > a{
+    text-decoration: none;
+    padding: 1rem;
+    color: #999;
+    font-size: 1.2rem;
+    transition: 250ms;
+
+}
+
+.nav_opts_on > li > a:hover{
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 0 2px white;
+}
+
+.active{
+    color: white !important;
+    cursor: pointer;
+    text-shadow: 0 0 2px white;
+}
+
+
+
+.heading{
+    padding-top: 0.3rem;
+    margin: .25rem .75rem;
+    /* font-size: 3rem; */
+    
+}
+
+.toggler{
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: #000;
+    border: none;
+    display: none;
+}
+
+@media (max-width: 810px){
+    .heading{
+        width: 100%;
+        margin-left: 13vw;
+    }
+    .navbar{
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    .nav_opts{
+        display: none;
+    }
+
+    .nav_opts_on{
+        flex-basis: 15vh;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .nav_opts_on > li{
+        width: 100%;
+    }
+    .nav_opts_on > li > a{
+        display: block;
+        /* border: solid 1px white; */
+        text-decoration: none;
+        margin: .2rem auto;
+        padding: 0.5rem 2rem;
+        color: #999;
+        font-weight: 600;
+        transition: 250ms;
+    
+        /* margin: 2rem auto; */
+        
+        border-top: solid 1px #e2e2e2;
+    
+    }
+    .nav_opts_on > li > a:hover{
+        color: white;
+        cursor: pointer;
+        text-shadow: 0 0 2px white;
+    }
+    .nav_opts_on > li > a:active{
+        color: white;
+        cursor: pointer;
+        text-shadow: 0 0 2px white;
+    }
+
+    .toggler{
+        display: inline;
+    }
+}
+
+h1 {
+    color: #fff;
+}

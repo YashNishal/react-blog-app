@@ -1,0 +1,18 @@
+.card {
+    background-color : #181a1b;
+    width: 100%;
+    max-width: 1000px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.dummy {
+    background-color : #181a1b;
+    width: 100%;
+    max-width: 1000px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    min-height: 250px;
+}

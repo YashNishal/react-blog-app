@@ -1,0 +1,26 @@
+
+.title {
+    color: #e8e6e3;
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 1.75rem;
+}
+
+.desc {
+    color : #e8e6e3;
+    margin-bottom: 1.25rem;
+}
+
+.author {
+    color : whitesmoke;
+    font-weight: bold;
+    font-style : italic;
+    align-self: flex-end;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}

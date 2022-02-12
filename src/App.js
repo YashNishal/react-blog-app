@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/navbar/navbar";
+import AddBlog from "./pages/AddBlog";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import Blogs from "./pages/Blogs";
+import Blogitem from "./pages/Blogitem";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [activeBtn,setActiveBtn] = useState("home")
+
+    
+    return (
+        <div className="App">
+            <Navbar activeBtn={activeBtn} setActiveBtn={setActiveBtn}/>
+            <main className="width">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blogs" element={<Blogs />} />
+                    <Route path="/add-blog" element={<AddBlog />} />
+
+                    <Route path="/blog/:id" element={<Blogitem />} />
+                </Routes>
+            </main>
+        </div>
+    );
 }
 
 export default App;
