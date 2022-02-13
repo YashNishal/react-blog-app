@@ -52,12 +52,12 @@
     font-size: 0.8rem;
 }
 
-.content > p{
+.content > div{
     margin: 0.3rem 1rem;
     letter-spacing: 0.1rem;
 }
 
-.content p::before {
+.content div::before {
     content: "$: ";
 }
 /* .content >.current::after {
@@ -70,3 +70,17 @@
 
     background-color: rgb(255, 242, 53);
 } */
+
+.content div:last-child::after{
+    content: "█";
+}
+.content > p{
+    color: rgb(18, 240, 18);
+    margin: 0.3rem 1rem;
+    /* letter-spacing: 0.1rem; */
+    font-size: 0.9rem;
+}
+
+.finalAnimation{
+    background-color: rgb(28, 28, 39);
+}
