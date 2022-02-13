@@ -19,7 +19,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<Blogs />} />
-                    <Route path="/add-blog" element={<AddBlog />} />
+                    <Route path="/add-blog" element={<AddBlog setActiveBtn={setActiveBtn}/>} />
 
                     <Route path="/blog/:id" element={<Blogitem />} />
                 </Routes>

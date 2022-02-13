@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 
-export default function AddBlog() {
+export default function AddBlog(props) {
     const navigate = useNavigate()
 
     function addBlog(blog) {
@@ -24,6 +24,8 @@ export default function AddBlog() {
         )
         .then(
             navigate('/blogs')
+        ).then(
+            props.setActiveBtn('blogs')
         )
     }
 

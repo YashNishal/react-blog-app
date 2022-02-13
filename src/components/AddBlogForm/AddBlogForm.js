@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import s from "./AddBlogForm.module.css";
-import _ from "lodash";
 
 export default function AddBlogForm(props) {
     const authorInputRef = useRef();
@@ -15,7 +14,7 @@ export default function AddBlogForm(props) {
             author : authorInputRef.current.value,
             title : titleInputRef.current.value,
             desc : contentInputRef.current.value,
-            id : authorInputRef.current.value + Date.now()
+            id : authorInputRef.current.value +" "+ Date.now()
         }
 
         props.addBlog(blog)

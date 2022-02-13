@@ -1,4 +1,6 @@
 import React from "react";
+import Terminal from "../components/Terminal";
+import IntroTv from "../components/introTV/introTv";
 
 export default function home() {
 
@@ -9,7 +11,8 @@ export default function home() {
 
     return (
         <div style={style}>
-            
+            <Terminal/>
+            <IntroTv/>
         </div>
     );
 }
