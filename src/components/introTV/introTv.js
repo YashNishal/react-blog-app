@@ -3,35 +3,41 @@ import Style from './IntroTv.module.css'
 import { Typewriter } from 'react-simple-typewriter'
 import Final from './final'
 
+//This gives the animation delay
 var AnimationDelay = 4000
 
 function IntroTv() {
 
+    //Add in this array to get lines
     const totalContent = [
         "This is the First line of Intro TV",
         "This is the Second line of Intro TV",
         "This is the Third line of Intro TV",
+        "This is the Forth line of Intro TV",
     ]
+
+
+
     const [currentContent, setCurrentContent] = useState([]);    
     const[finalAnimation, setFinalAnimation] = useState("");    
     const[finalProps, setFinalProps] = useState("");    
     const[isFinalAnimation, setIsFinalAnimation] = useState(0);
-    let i = 0;
+    let i = 1;
     
     
     const loadLine = line => {
+        console.log(currentContent);
         setCurrentContent( prev => [...prev, line])
     }
     
     const loadLines = () => {
 
         let Linesinterval = setInterval(async() => {
-            console.log(currentContent);
-            // console.log(totalContent[i]);
             loadLine(totalContent[i]);
             i++;
             if(i >= totalContent.length){
                 clearInterval(Linesinterval);
+                
                 //After loadLines, the next animation is written here
                 var timeOut = setTimeout(() => {
                     clearTimeout(timeOut);
@@ -55,10 +61,6 @@ function IntroTv() {
 
     useEffect(() => {
         AnimateIntroTv();
-
-        return( () => {
-
-        })
     }, [])
     
 
@@ -70,6 +72,10 @@ function IntroTv() {
                 <div className={Style.circle + " " + Style.Green}></div>
             </div>
             <div className={Style.content}>
+                <div>
+                    <Typewriter className= {Style.contentLine} words={[totalContent[0]]}/>
+                </div>
+
                 {currentContent.map( line => 
                     <div key={line}>
                         <Typewriter className= {Style.contentLine} words={[line]}/>
