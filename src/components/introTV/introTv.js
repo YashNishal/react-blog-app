@@ -10,10 +10,10 @@ function IntroTv() {
 
     //Add in this array to get lines
     const totalContent = [
-        "This is the First line of Intro TV",
-        "This is the Second line of Intro TV",
-        "This is the Third line of Intro TV",
-        "This is the Forth line of Intro TV",
+        "We wanted to learn React.....",
+        "We also wanted to do something crazy",
+        "What did we do -->   -->   -->",
+        "We created a Blog Page ofc ;)",
     ]
 
 
@@ -24,6 +24,8 @@ function IntroTv() {
     const[isFinalAnimation, setIsFinalAnimation] = useState(0);
     let i = 1;
     
+    let timeOut;
+    let Linesinterval;
     
     const loadLine = line => {
         console.log(currentContent);
@@ -32,19 +34,19 @@ function IntroTv() {
     
     const loadLines = () => {
 
-        let Linesinterval = setInterval(async() => {
+        Linesinterval = setInterval(async() => {
             loadLine(totalContent[i]);
             i++;
             if(i >= totalContent.length){
                 clearInterval(Linesinterval);
                 
                 //After loadLines, the next animation is written here
-                var timeOut = setTimeout(() => {
+                timeOut = setTimeout(() => {
                     clearTimeout(timeOut);
                     console.log("next animation");
                     setFinalAnimation(Final)
-                    var timeOut2 = setTimeout( () => {
-                        clearTimeout(timeOut2);
+                    timeOut = setTimeout( () => {
+                        clearTimeout(timeOut);
                         setIsFinalAnimation(1);
                         setFinalProps(<div></div>);
                     }, AnimationDelay)
@@ -61,6 +63,11 @@ function IntroTv() {
 
     useEffect(() => {
         AnimateIntroTv();
+
+        return( () => {
+            clearTimeout(timeOut);
+            clearInterval(Linesinterval);
+        })
     }, [])
     
 

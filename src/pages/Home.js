@@ -1,18 +1,20 @@
 import React from "react";
-import Terminal from "../components/Terminal";
 import IntroTv from "../components/introTV/introTv";
+import AnimatedPage from "../components/AnimatedPages/AnimatedPages";
+import Style from '../css/Home.module.css'
 
 export default function home() {
 
-
-    const style = {
-        color: '#fff'
-    }
-
     return (
-        <div style={style}>
-            <Terminal/>
-            <IntroTv/>
-        </div>
+        <AnimatedPage>
+            <div className={Style.intro}>
+                <IntroTv />
+                
+                <div className={Style.introHead}>
+                    <h1>A general Yet fun blogpage</h1>
+                </div>
+            </div>
+
+        </AnimatedPage>
     );
 }

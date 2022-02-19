@@ -1,14 +1,13 @@
 import React from "react";
-import s from "./AddBlog.module.css";
+import s from "../css/AddBlog.module.css";
 import AddBlogForm from "../components/AddBlogForm/AddBlogForm";
 import OuterCard from "../components/OuterCard/OuterCard";
 import Card from "../components/Card/Card";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
-
+import AnimatedPage from "../components/AnimatedPages/AnimatedPages";
 
 export default function AddBlog(props) {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     function addBlog(blog) {
         console.log(blog);
@@ -19,22 +18,23 @@ export default function AddBlog(props) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body : JSON.stringify(blog)
+                body: JSON.stringify(blog),
             }
         )
-        .then(
-            navigate('/blogs')
-        ).then(
-            props.setActiveBtn('blogs')
-        )
+            .then(navigate("/blogs"))
+            .then(props.setActiveBtn("blogs"));
     }
 
-    return (
-        <OuterCard>
-            <h2 class={s.heading}>Add Blog <FontAwesomeIcon icon="fa-solid fa-file-circle-plus" color="white"/></h2>
-            <Card>
-                <AddBlogForm addBlog={addBlog}/>
-            </Card>
-        </OuterCard>
+    return (    
+        <AnimatedPage>
+            <OuterCard>
+                <h2 className={s.heading}>
+                    Add Blog
+                </h2>
+                <Card>
+                    <AddBlogForm addBlog={addBlog} />
+                </Card>
+            </OuterCard>
+        </AnimatedPage>
     );
 }

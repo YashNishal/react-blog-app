@@ -3,32 +3,12 @@ import React, { useEffect, useState } from "react";
 import Card from "../components/Card/Card";
 import BlogItem from "../components/BlogItem/BlogItem";
 import OuterCard from "../components/OuterCard/OuterCard";
-
-// const DummyData = [
-//     {
-//         id: 1,
-//         title: "The Complete Guide to Full Stack Web Development",
-//         author: "Yash Nishal",
-//         desc: "The main network we'll be deploying to is Polygon. I chose Polygon because of its low transaction cost, fast block times, and current network adoption.That being said, we're going to be building on the Ethereum Virtual Machine (EVM), so you can apply these skills to build for dozens of other blockchain networks as well, including Ethereum, Celo, Avalanche, and many others.",
-//     },
-//     {
-//         id: 2,
-//         title: "The Complete Guide to Full Stack Web Development",
-//         author: "Yash Nishal",
-//         desc: "The main network we'll be deploying to is Polygon. I chose Polygon because of its low transaction cost, fast block times, and current network adoption.That being said, we're going to be building on the Ethereum Virtual Machine (EVM), so you can apply these skills to build for dozens of other blockchain networks as well, including Ethereum, Celo, Avalanche, and many others.",
-//     },
-//     {
-//         id: 3,
-//         title: "The Complete Guide to Full Stack Web Development",
-//         author: "Yash Nishal",
-//         desc: "The main network we'll be deploying to is Polygon. I chose Polygon because of its low transaction cost, fast block times, and current network adoption.That being said, we're going to be building on the Ethereum Virtual Machine (EVM), so you can apply these skills to build for dozens of other blockchain networks as well, including Ethereum, Celo, Avalanche, and many others.",
-//     },
-// ];
+import AnimatedPage from "../components/AnimatedPages/AnimatedPages";
+import { AnimateSharedLayout, motion } from "framer-motion";
 
 export default function Blogs() {
     const [isLoading, setIsLoading] = useState(true);
     const [blogs, setBlogs] = useState([]);
-
 
     useEffect(() => {
         setIsLoading(true);
@@ -47,6 +27,7 @@ export default function Blogs() {
             .then((response) => response.json())
             .then((data) => {
                 setBlogs(Object.values(data));
+                console.log(data)
                 setIsLoading(false);
             })
             .catch((err) => {
@@ -63,19 +44,25 @@ export default function Blogs() {
     }
 
     return (
-        <OuterCard>
-            {/* <p className={styles.heading}>Blogs route</p> */}
-            {isLoading
-                ? dummyLoadingScreen()
-                : blogs.map((Blog) => (
-                      <Card key={Blog.id}>
-                          <BlogItem
-                              title={Blog.title}
-                              author={Blog.author}
-                              desc={Blog.desc}
-                          />
-                      </Card>
-                  ))}
-        </OuterCard>
+        <AnimatedPage>
+            <OuterCard>
+                <AnimateSharedLayout>
+                    {isLoading
+                        ? dummyLoadingScreen()
+                        : blogs.map((Blog) => (
+                              <motion.div layout  key={Blog.id}>
+                                  <Card>
+                                      <BlogItem
+                                          title={Blog.title}
+                                          author={Blog.author}
+                                          desc={Blog.desc}
+                                          id={Blog.id}
+                                      />
+                                  </Card>
+                              </motion.div>
+                          ))}
+                </AnimateSharedLayout>
+            </OuterCard>
+        </AnimatedPage>
     );
 }
