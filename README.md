@@ -1,3 +1,5 @@
+![GIF](/Assets/22-02-22-21-12-02.gif?raw=true "GIF")
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
