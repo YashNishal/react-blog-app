@@ -10,9 +10,9 @@ export default function home() {
             <div className={Style.intro}>
                 <IntroTv />
                 
-                <div className={Style.introHead}>
+                {/* <div className={Style.introHead}>
                     <h1>A general Yet fun blogpage</h1>
-                </div>
+                </div> */}
             </div>
 
         </AnimatedPage>
