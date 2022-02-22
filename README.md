@@ -1,4 +1,4 @@
-![GIF](/Assets/22-02-22-21-12-02.gif?raw=true "GIF" {width=40px})
+![GIF](/Assets/22-02-22-21-12-02.gif?raw=true "GIF" {width=100px height=400px})
 
 # Getting Started with Create React App
 
