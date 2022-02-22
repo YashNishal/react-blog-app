@@ -1,5 +1,4 @@
-![GIF](?raw=true "GIF" {width=100px height=400px})
-<img src="/Assets/22-02-22-21-12-02.gif" width="200" height="400"/>
+<img src="/Assets/22-02-22-21-12-02.gif" width="400" height="800"/>
 
 # Getting Started with Create React App
 
