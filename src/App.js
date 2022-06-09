@@ -4,7 +4,7 @@ import AddBlog from "./pages/AddBlog";
 import Home from "./pages/Home";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Blogs from "./pages/Blogs";
-import Blogitem from "./pages/Blogitem";
+// import Blogitem from "./pages/Blogitem";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
@@ -24,8 +24,6 @@ function App() {
                             path="/add-blog"
                             element={<AddBlog setActiveBtn={setActiveBtn} />}
                         />
-
-                        <Route path="/blog/:id" element={<Blogitem />} />
                     </Routes>
                 </AnimatePresence>
             </main>
