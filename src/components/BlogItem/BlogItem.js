@@ -20,10 +20,15 @@ export default function BlogItem(props) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        {props.desc.substring(0,200) + (props.desc.length>200?"..." : "") }
+                        {props.desc} 
+                        
                         {
-                            props.desc.length>200?<Link to={"/blog/"+props.id} >Read more</Link>:""
+                        //.substring(0,200) + (props.desc.length>200?"..." : ""}   
                         }
+                        
+                        {/* {
+                            props.desc.length>200?<Link to={"/blog/"+props.id} >Read more</Link>:""
+                        } */}
                     </motion.div>
                 )}
             </AnimatePresence>
