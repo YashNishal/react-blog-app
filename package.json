@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "0.1.0",
-  "homepage": "https://hardyslays.github.io/react-blog-app",
+  "homepage": "https://hardyslays.github.io/react-blog-app/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
