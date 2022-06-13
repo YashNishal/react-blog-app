@@ -1,43 +1,16 @@
+# React Blog App
+
+## Introduction
+We created a simple and striaghtforward Blog app using react and react routing. It has the features of hot routing, great aesthetics and a crazy-fun Terminal component for attraction purposes. The app contains three pages i.e. Home page (/home) , Blogs page (/blog) and a page for adding a new blog (/add-blog).
+
+The web app is responsive and has support for all standard screen sizes. The home page contains the terminal UI component, the blogs page contains all the blogs in individual expandable cards and the add blog page contains a form with Author, Title and content inputs.
+
+The blogs are stored in a Firebase database hosted on google cloud, and the API calls are being made to the database itself. You can use the APIs of your own database to create a different instance of this app. There are two major API calls i.e. the API call to fetch all the blogs present and the API call to add a new blog to the database.
+
+The preview of mobile version of the app is shown in the below GIF:
+
 <img src="/Assets/22-02-22-21-12-02.gif" width="400" height="800"/>
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
+## Prologue
+We have hosted this app on Github pages, if you want to take a look. [Here](https://hardyslays.github.io/react-blog-app) is the web app. This was built by [Himanshu](https://github.com/hardyslays) and [Yash Nishal](https://github.com/YashNishal) and is free to use and develop. If you like the project, please give it a star and if you want to make some changes, create a Pull request or issues for the repo.
+Happy coding!!!

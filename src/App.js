@@ -5,13 +5,17 @@ import Home from "./pages/Home";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Blogs from "./pages/Blogs";
 // import Blogitem from "./pages/Blogitem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
     const [activeBtn, setActiveBtn] = useState("home");
     const location = useLocation();
 
+    useEffect(() => {
+   document.title = "React Blog App"
+}, []);
+    
     return (
         <div className="App">
             <Navbar activeBtn={activeBtn} setActiveBtn={setActiveBtn} />
